@@ -1,6 +1,5 @@
 const URL_API = 'http://localhost:3005/opinionManager/v1';
 
-// Navegación de pestañas
 function changeTab(tab) {
     document.querySelectorAll('section').forEach(s => s.style.display = 'none');
     document.getElementById(`view-${tab}`).style.display = 'block';
@@ -10,7 +9,6 @@ function changeTab(tab) {
     if (tab === 'comments') loadComments();
 }
 
-// --- LÓGICA DE USUARIOS ---
 const userForm = document.getElementById('form-user');
 userForm.onsubmit = async (e) => {
     e.preventDefault();
@@ -75,7 +73,6 @@ async function deleteUser(id) {
     }
 }
 
-// --- LÓGICA DE POSTS ---
 const postForm = document.getElementById('form-post');
 
 postForm.onsubmit = async (e) => {
@@ -99,8 +96,8 @@ postForm.onsubmit = async (e) => {
 
         if (response.ok) {
             postForm.reset();
-            document.getElementById('p-id').value = ""; // Limpiar ID oculto
-            document.getElementById('p-btn').innerText = "Publicar"; // Restaurar texto del botón
+            document.getElementById('p-id').value = "";
+            document.getElementById('p-btn').innerText = "Publicar";
             loadPosts();
         } else {
             const err = await response.json();
@@ -131,16 +128,11 @@ async function loadPosts() {
     } catch (error) { console.error("Error cargando posts:", error); }
 }
 function editPost(id, title, content, authorId) {
-    // 1. Llenamos los campos del formulario de posts
     document.getElementById('p-id').value = id;
     document.getElementById('p-title').value = title;
     document.getElementById('p-content').value = content;
     document.getElementById('p-author').value = authorId;
-
-    // 2. Cambiamos el texto del botón para indicar edición
     document.getElementById('p-btn').innerText = "Actualizar Publicación";
-
-    // 3. Subimos la pantalla para que el usuario vea el formulario lleno
     window.scrollTo(0, 0);
 }
 
@@ -151,7 +143,6 @@ async function deletePost(id) {
     }
 }
 
-// --- LÓGICA DE COMENTARIOS (CON EDICIÓN) ---
 const commentForm = document.getElementById('form-comment');
 commentForm.onsubmit = async (e) => {
     e.preventDefault();
@@ -215,5 +206,4 @@ async function deleteComment(id) {
     }
 }
 
-// Carga inicial
 window.onload = loadUsers;

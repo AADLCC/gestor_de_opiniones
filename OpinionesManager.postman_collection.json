@@ -1,0 +1,351 @@
+{
+  "info": {
+    "_postman_id": "34a54a36-da18-4589-9d66-2eea257c3269",
+    "name": "OpinionesManager",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51902887",
+    "_collection_link": "https://go.postman.co/collection/51902887-34a54a36-da18-4589-9d66-2eea257c3269?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Juan\",\r\n  \"surname\": \"Pérez\",\r\n  \"username\": \"jperez\",\r\n  \"email\": \"juan@example.com\",\r\n  \"password\": \"Password123!\",\r\n  \"dateOfBirth\": \"1990-05-15\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Juan\",\r\n  \"surname\": \"Pérez\",\r\n  \"username\": \"jperez\",\r\n  \"email\": \"juan@example.com\",\r\n  \"password\": \"Password123!\",\r\n  \"dateOfBirth\": \"1990-05-15\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Beatriz\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/users/69951a3f2681bf5322b5d71e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "users",
+                "69951a3f2681bf5322b5d71e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Juan\",\r\n  \"surname\": \"Pérez\",\r\n  \"username\": \"jperez\",\r\n  \"email\": \"juan@example.com\",\r\n  \"password\": \"Password123!\",\r\n  \"dateOfBirth\": \"1990-05-15\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/users/69951a3f2681bf5322b5d71e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "users",
+                "69951a3f2681bf5322b5d71e"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Mi primera opinión\",\r\n  \"category\": \"Tecnología\",\r\n  \"content\": \"Este es el contenido de mi post sobre Node.js\",\r\n  \"author\": \"69951b6f2681bf5322b5d725\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/posts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "posts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Mi primera opinión\",\r\n  \"category\": \"Tecnología\",\r\n  \"content\": \"Este es el contenido de mi post sobre Node.js\",\r\n  \"author\": \"69951b6f2681bf5322b5d725\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/posts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "posts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Mi segunda opinión\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/posts/69951bbe2681bf5322b5d728",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "posts",
+                "69951bbe2681bf5322b5d728"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/posts/69951bbe2681bf5322b5d728",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "posts",
+                "69951bbe2681bf5322b5d728"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "comments",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"text\": \"¡Excelente publicación!\",\r\n  \"userId\": \"69951b6f2681bf5322b5d725\",\r\n  \"postId\": \"69951d2e2681bf5322b5d732\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/feedback",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "feedback"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/feedback/69951dd82681bf5322b5d73a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "feedback",
+                "69951dd82681bf5322b5d73a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"text\": \"¡Malisima publicación!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3005/opinionManager/v1/feedback/69951e8b2681bf5322b5d751",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3005",
+              "path": [
+                "opinionManager",
+                "v1",
+                "feedback",
+                "69951e8b2681bf5322b5d751"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
