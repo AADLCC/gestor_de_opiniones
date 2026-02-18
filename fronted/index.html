@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Opiniones FullStack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <h2>KinalFace</h2>
+        <hr>
+        <button onclick="changeTab('users')">Usuarios</button>
+        <button onclick="changeTab('posts')">Publicaciones</button>
+        <button onclick="changeTab('comments')">Comentarios</button>
+    </nav>
+
+    <main class="content">
+
+        <section id="view-users">
+            <h1>Gestión de Usuarios</h1>
+            <form id="form-user" class="main-form">
+                <input type="hidden" id="u-id">
+                <div class="form-group">
+                    <input type="text" id="u-name" placeholder="Nombre" required>
+                    <input type="text" id="u-surname" placeholder="Apellido" required>
+                </div>
+                <input type="text" id="u-username" placeholder="Nombre de Usuario (Username)" required>
+                <input type="email" id="u-email" placeholder="Correo Electrónico" required>
+                <input type="password" id="u-password" placeholder="Contraseña">
+                <button type="submit" id="u-btn">Registrar Usuario</button>
+            </form>
+            <div id="list-users" class="grid-list"></div>
+        </section>
+
+        <section id="view-posts" style="display:none;">
+            <h1>Publicaciones</h1>
+            <form id="form-post" class="main-form">
+                <input type="hidden" id="p-id">
+                <input type="text" id="p-title" placeholder="Título de la publicación" required>
+                <textarea id="p-content" placeholder="¿Qué estás pensando?" required></textarea>
+                <input type="text" id="p-author" placeholder="Pegar ID del Autor (Usuario)" required>
+                <button type="submit" id="p-btn">Publicar</button>
+            </form>
+            <div id="list-posts" class="grid-list"></div>
+        </section>
+
+        <section id="view-comments" style="display:none;">
+            <h1>Comentarios</h1>
+            <form id="form-comment" class="main-form">
+                <input type="hidden" id="c-id"> <textarea id="c-text" placeholder="Escribe tu opinión aquí..."
+                    required></textarea>
+                <div class="form-group">
+                    <input type="text" id="c-user" placeholder="ID del Usuario" required>
+                    <input type="text" id="c-post" placeholder="ID del Post" required>
+                </div>
+                <button type="submit" id="c-btn">Comentar</button>
+            </form>
+            <div id="list-comments" class="grid-list"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
